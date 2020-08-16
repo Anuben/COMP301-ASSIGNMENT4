@@ -8,6 +8,7 @@ File Description:  Generate the sentence
 """
 import random
 
+# Read the file, make the tuple temporary list and return words
 def getWords(filename):
 
     fln = open(filename)
