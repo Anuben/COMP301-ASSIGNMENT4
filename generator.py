@@ -42,10 +42,22 @@ def adjectivePhase():
     return random.choice(adjectives)
 
 def verbPhrase():
-    return random.choice(verbs) + " " + nounPhrase() 
+    prepoandconjuctionPharse = ""
+    prepoandconjuctionsPharse = random.randrange(100) + 1
+    if(prepoandconjuctionsPharse > 50):
+        prepoandconjuctionPharse  = prepositionalPhrase()
+
+    else:
+        prepoandconjuctionPharse  = conjuctionPharse() 
+    
+    return random.choice(verbs) + " " + nounPhrase() + " " + prepoandconjuctionPharse
+    
    
 def prepositionalPhrase():
     return random.choice(prepositions) + " " + nounPhrase() 
+
+def conjuctionPharse():
+   return random.choice(conjuction) + " " + nounPhrase() + " " + verbPhrase()
 
 def main():
     
